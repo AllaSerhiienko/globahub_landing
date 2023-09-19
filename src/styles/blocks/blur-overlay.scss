@@ -1,0 +1,17 @@
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $headerTopHeight;
+  min-height: $headerTopMinHeight;
+  max-height: $headerTopMaxHeight;
+
+  // background: rgba(122, 112, 94, 0); /* Прозорий фон */
+  backdrop-filter: blur(80px);
+
+  @include onTablet {
+    background-image: 
+  linear-gradient(to right, rgba(157, 147, 124, 0.0), rgba(89, 87, 81, 0.5));
+  }
+}

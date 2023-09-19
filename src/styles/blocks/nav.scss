@@ -1,0 +1,85 @@
+.nav {
+  display: block;
+
+  &--header {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include onTablet {
+      gap: 40px;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      // gap: 30px;
+      align-items: start;
+    }
+  }
+
+  &__link {
+    display: block;
+    box-sizing: border-box;
+    padding: 8px 0;
+
+    // color: #005fa3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    // text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+
+    // transition: color 0.3s;
+    transition: border-color 0.3s;
+
+    @include onTablet {
+      font-weight: 400;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+    }
+
+    &:hover {
+      border-color: $colorBlue;
+    }
+
+    &--contact-us {
+      padding-left: 25px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: $colorLightBlue;
+
+      background-image: url(../images/phone.svg);
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      background-size: 18px 18px;
+
+      @include onTablet {
+        color: $colorBlue;
+        background-image: url(../images/phone-tablet.svg);
+      }
+
+      @include onDesktop {
+        color: $colorLightBlue;
+        background-image: url(../images/phone.svg);
+      }
+    }
+  }
+}

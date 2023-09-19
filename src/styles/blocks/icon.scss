@@ -1,0 +1,37 @@
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &--menu {
+    background-image: url(../images/menu-mobile.svg);
+
+    &:hover {
+      background-image: url(../images/menu-hover-mobile.svg);
+    }
+
+    @include onTablet {
+      background-image: url(../images/menu.svg);
+
+      &:hover {
+        background-image: url(../images/menu-hover.svg);
+      }
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &--cross {
+    background-image: url(../images/cross-mobile.svg);
+
+    @include onTablet {
+      background-image: url(../images/cross.svg);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.header {
+  // background-image: url(../images/header.jpg);
+
+  background-image: 
+    linear-gradient(to right, rgba(157, 147, 124, 0.1), rgba(157, 147, 124, 0.1)),
+    url(../images/header.jpg);
+
+  background-size: cover;
+
+  background-position: 0 center;
+  background-repeat: no-repeat;
+
+  @include onTablet {
+    background-image: url(../images/header.jpg);
+
+    background-image: 
+    linear-gradient(to right, rgba(157, 147, 124, 0.15), rgba(157, 147, 124, 0.0)),
+    url(../images/header.jpg);
+
+    background-position: 44% center;
+  }
+
+  @include onDesktop {
+    background-image: url(../images/header.jpg);
+
+    // background-position: center;
+    background-position: 40% 40%;
+  }
+
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+
+    box-sizing: border-box;
+
+    height: 100vh;
+    // min-height: 100vh;
+    max-height: 1000px;
+  }
+
+  &__top {
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $headerTopHeight;
+    min-height: $headerTopMinHeight;
+    max-height: $headerTopMaxHeight;
+    z-index: 1;
+  }
+
+  &__bottom {
+    margin: auto 0;
+    color: #fff;
+  }
+
+  &__title {
+    margin: 0;
+    // font-family: 'Montserrat', sans-serif;
+    font-size: 8vw;
+    line-height: 120%;
+    font-weight: 600;
+    // font-weight: 500;
+    // letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 40px 0 50px;
+      height: 3px;
+      width: 100px;
+      background-color: $colorLightBlue;
+    }
+
+    @include onTablet {
+      font-size: 4.3vw;
+    }
+
+    @include onDesktop {
+      font-size: 46px;
+    }
+  }
+
+  &__paragraph {
+    font-size: 18px;
+
+    @include onTablet {
+      font-size: 16px;
+      width: 40%;
+    }
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+}
