@@ -1,1 +1,1 @@
-[DEMO LINK](https://AllaSerhiienko.github.io/globahub/)
+[DEMO LINK](https://AllaSerhiienko.github.io/globahub_landing/)
