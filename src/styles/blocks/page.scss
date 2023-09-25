@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .page {
   // font-family: 'Poppins', sans-serif;
   font-family: 'Montserrat', sans-serif;
@@ -28,6 +32,58 @@
 
     &:target {
       transform: translateX(0);
+    }
+  }
+
+  &__section {
+    margin-bottom: 64px;
+
+    @include onTablet {
+      margin-bottom: 80px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__section-title {
+    margin: 0 0 32px;
+    // padding: 0;
+    // margin: 0 0 0;
+
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 100%;
+    text-transform: uppercase;
+    // text-align: center;
+    // letter-spacing: -1.5px;
+    // color: #000;
+
+    @include onTablet {
+      margin-bottom: 42px;
+      font-size: 36px;
+      line-height: 100%;
+    }
+
+    @include onDesktop {
+      // margin-bottom: 48px;
+      font-size: 50px;
+      line-height: 100%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 10px;
+      height: 3px;
+      width: 80px;
+      background-color: $colorLightBlue;
+
+      @include onTablet {
+        width: 100px;
+        margin-top: 20px;
+      }
     }
   }
 }

@@ -1,6 +1,9 @@
 @import "utils/mixins";
 @import "utils/variables";
 
+@import "./blocks/grid";
+@import './blocks/icon';
+
 @import './blocks/page';
 @import './blocks/container';
 @import './blocks/header';
@@ -8,4 +11,6 @@
 @import './blocks/blur-overlay';
 @import './blocks/nav';
 @import './blocks/menu';
-@import './blocks/icon';
+@import './blocks/about-us';
+@import './blocks/services';
+@import './blocks/service-card';
